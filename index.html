@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProScore Hosting Test</title>
+<style>
+body{margin:0;background:#0d1728;color:#eef5ff;font:16px/1.8 system-ui,sans-serif;padding:24px}main{max-width:600px;margin:8vh auto;background:#17283e;padding:26px;border:1px solid #35516b;border-radius:20px}h1{font-size:26px;color:#63e6bc;margin:0 0 14px}button{background:#37b7f4;color:#061424;border:0;border-radius:10px;padding:14px 20px;font:inherit;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d1728;padding:16px;border-radius:10px;font-size:13px}small{color:#b6c9dd}
+</style>
+</head>
+<body><main>
+<h1>HTML ဖွင့်လို့ရပါပြီ ✓</h1>
+<p>ဒီစာကိုမြင်ရရင် ဒီ hosting က စာမျက်နှာကို browser မှာ ပြသနိုင်ပါပြီ။</p>
+<p id="js">JavaScript မစစ်ရသေးပါ။</p>
+<button id="test" type="button">ခလုတ် စမ်းနှိပ်ပါ</button>
+<p id="result" aria-live="polite"></p>
+<pre id="details"></pre>
+<small>Supabase၊ API၊ login၊ ပြင်ပ font နဲ့ CDN မပါပါ။ ဒီစာမျက်နှာရတာက App login ရမယ်လို့ မဆိုလိုပါ။</small>
+<noscript><p>JavaScript ပိတ်ထားပါတယ်။ HTML ကတော့ ဖွင့်လို့ရပါတယ်။</p></noscript>
+</main>
+<script>
+'use strict';
+document.getElementById('js').textContent='JavaScript အလုပ်လုပ်ပါတယ် ✓';
+document.getElementById('details').textContent='Test: PS-HOST-01\nHost: '+location.host+'\nProtocol: '+location.protocol+'\nOpened: '+new Date().toISOString()+'\nBrowser: '+navigator.userAgent;
+var count=0;
+document.getElementById('test').addEventListener('click',function(){count++;document.getElementById('result').textContent='ခလုတ် အလုပ်လုပ်ပါတယ် ✓ ('+count+')';});
+</script>
+</body></html>
